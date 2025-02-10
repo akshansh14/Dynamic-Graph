@@ -64,28 +64,28 @@ export default function App() {
     <div className="flex flex-col min-h-screen bg-gray-50 overflow-hidden">
       <Navbar />
       
-      <div className="flex flex-row">
+      <div className="flex flex-col lg:flex-row">
         <Sidebar />
         
-        <div className="flex-1 p-8 w-full">
+        <div className="flex-1 p-4 md:p-8 w-full overflow-x-hidden">
           <div className="max-w-[1200px] mx-auto">
             {/* Header Section */}
-            <div className="bg-white rounded-2xl p-6 mb-6">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-6">
+            <div className="bg-white rounded-2xl p-4 md:p-6 mb-4 md:mb-6">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div className="flex items-center gap-4 md:gap-6">
                   <div className="p-2 bg-orange-50 rounded-xl">
-                    <SiHtml5 className="text-4xl text-orange-600" />
+                    <SiHtml5 className="text-2xl md:text-4xl text-orange-600" />
                   </div>
                   <div>
-                    <h1 className="text-2xl font-bold mb-1">Hyper Text Markup Language</h1>
-                    <p className="text-sm text-gray-500">
+                    <h1 className="text-xl md:text-2xl font-bold mb-1">Hyper Text Markup Language</h1>
+                    <p className="text-xs md:text-sm text-gray-500">
                       Questions: 08 | Duration: 15 mins | Submitted on 5 June 2021
                     </p>
                   </div>
                 </div>
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className="px-6 py-2.5 bg-blue-700 text-white text-sm font-medium rounded-lg hover:bg-blue-800"
+                  className="px-4 md:px-6 py-2 md:py-2.5 bg-blue-700 text-white text-sm font-medium rounded-lg hover:bg-blue-800 w-full sm:w-auto"
                 >
                   Update
                 </button>
@@ -93,9 +93,9 @@ export default function App() {
             </div>
 
             {/* Quick Statistics Section */}
-            <div className="bg-white rounded-2xl p-6 mb-6">
-              <h2 className="text-xl font-bold mb-8">Quick Statistics</h2>
-              <div className="grid grid-cols-3 gap-16">
+            <div className="bg-white rounded-2xl p-4 md:p-6 mb-4 md:mb-6">
+              <h2 className="text-lg md:text-xl font-bold mb-6 md:mb-8">Quick Statistics</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-16">
                 <div className="flex flex-col items-center">
                   <div className="mb-3">
                     <FaTrophy className="text-4xl text-yellow-500" />
@@ -122,7 +122,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
               {/* Graph Section */}
               <div className="bg-white rounded-2xl p-6">
                 <h2 className="text-xl font-bold mb-8">Comparison Graph</h2>

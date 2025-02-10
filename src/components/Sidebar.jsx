@@ -4,8 +4,8 @@ import { BsBriefcase } from 'react-icons/bs'
 
 export default function Sidebar() {
   return (
-    <div className="w-64 h-screen bg-white border-r border-gray-200">
-      <nav className="px-4 pt-6 space-y-1">
+    <div className="w-full lg:w-64 lg:h-screen bg-white border-b lg:border-b-0 lg:border-r border-gray-200">
+      <nav className="px-4 py-2 lg:pt-6 flex lg:flex-col gap-1 overflow-x-auto lg:overflow-x-visible">
         <SidebarLink icon={<RiDashboardLine />} text="Dashboard" className="text-lg" />
         <SidebarLink 
           icon={<FaRegLightbulb />} 
@@ -23,7 +23,7 @@ function SidebarLink({ icon, text, active = false }) {
   return (
     <a
       href="#"
-      className={`flex items-center gap-3 px-4 py-3 text-sm rounded-lg
+      className={`flex items-center gap-3 px-4 py-3 text-sm md:text-base rounded-lg whitespace-nowrap
         ${active 
           ? 'bg-blue-50 text-blue-600 font-medium' 
           : 'text-gray-700 hover:bg-gray-50'

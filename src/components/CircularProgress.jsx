@@ -1,4 +1,3 @@
-
 import image from '../assets/target-dart.webp'
 
 export default function CircularProgress({ value }) {
@@ -6,7 +5,7 @@ export default function CircularProgress({ value }) {
   const strokeDashoffset = circumference - (value / 100) * circumference
 
   return (
-    <div className="relative w-32 h-32">
+    <div className="relative w-24 h-24 md:w-32 md:h-32">
       <svg className="w-full h-full" viewBox="0 0 100 100">
         <circle
           className="text-gray-200"
